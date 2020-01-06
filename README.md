@@ -1,64 +1,63 @@
 
-# **DICODING MADE Submission 3**
-# *Syahroni Wahyu Iriananda*
+# **Submission**
 
-Anda sudah mempelajari beberapa hal tentang **Background Service**, salah satunya adalah bagaimana cara mendapatkan data dari internet menggunakan <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">AsyncTaskLoader</span>**. **Untuk lanjut mempelajari modul berikutnya, kirimkan proyek aplikasi dengan tema Anda perlu** Movie Catalogue (API). **Jika pada submission sebelumnya Anda hanya memanfaatkan data lokal untuk ditampilkan, kali ini data yang akan ditampilkan adalah data dari API, yaitu [**The Movie DB**](https://www.themoviedb.org/)**.**
+Selamat, Anda telah berada di akhir pembelajaran dalam akademi ini. Anda telah belajar banyak tentang pengembangan aplikasi berbasis Android. Untuk bisa lulus dari akademi ini Anda akan memodifikasi proyek submission **Aplikasi Movie Catalogue (Local Storage)** dengan menambahkan beberapa fitur. Anda bisa memanfaatkan beberapa materi yang telah dipelajari. Selamat berkreasi!
 
 ## Kriteria
 
-Fitur yang harus ada pada aplikasi:
+Fitur yang harus ditambahkan pada aplikasi:
 
-1.  **Daftar film  
-    **Syarat:
-    *   Terdapat 2 (dua) halaman yang menampilkan daftar film (**Movies** dan **Tv Show**)
-    *   Menggunakan <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">Fragment</span> untuk menampung halaman **Movies** dan **Tv Show**.
-    *   Menggunakan <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">RecyclerView</span> untuk menampilkan daftar film.
-    *   Menggunakan<span> </span><span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">TabLayout</span>, <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">BottomNavigationView</span> atau yang lainnya sebagai navigasi antara halaman<span> </span>**Movies**<span> </span>dan<span> </span>**Tv Show**.
-    *   Menampilkan indikator loading ketika data sedang dimuat.  
-
-2.  **Detail film  
-    **Syarat:
-    *   Menampilkan poster dan informasi film pada halaman detail film.
-    *   Menggunakan <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">ConstraintLayout</span> untuk menyusun layout.
-    *   Menampilkan indikator loading ketika data sedang dimuat.  
-
-3.  **Localization**  
+1.  **Pencarian film**  
     Syarat:
-    *   Aplikasi harus mendukung bahasa Indonesia dan bahasa Inggris.  
+    *   Pengguna dapat melakukan pencarian **Movies**.
+    *   Pengguna dapat melakukan pencarian **Tv Show**.  
 
-4.  **Configuration Changes  
-    **Syarat:
-    *   Aplikasi harus bisa menjaga data yang sudah dimuat ketika terjadi pergantian orientasi dari potrait ke landscape atau sebaliknya.
+2.  **Widget**  
+    Syarat:
+    *   Pengguna dapat menampilkan widget dari film favorite ke halaman utama smartphone.
+    *   Tipe widget yang diterapkan adalah **Stack Widget**.  
+
+3.  **Reminder**  
+    Syarat:
+    *   Daily Reminder, mengirimkan notifikasi ke pengguna untuk kembali ke **Aplikasi Movie Catalogue**. Daily reminder harus selalu berjalan tiap jam 7 pagi.
+    *   Release Today Reminder, mengirimkan notifikasi ke pengguna semua film yang rilishari ini (**wajib menggunakan endpoint seperti yang telah disediakan pada bagian Resources di bawah**). Release reminder harus selalu berjalan tiap jam 8 pagi.
+    *   Terdapat halaman pengaturan untuk mengaktifkan dan menonaktifkan reminder.  
+
+4.  **Aplikasi** **Favorite**  
+    Syarat:
+    *   Membuat aplikasi atau modul baru yang menampilkan daftar film favorite.
+    *   Menggunakan **Content Provider** sebagai mekanisme untuk mengakses data dari satu aplikasi ke aplikasi lain.
 
 Berikut kerangka tampilan yang bisa Anda gunakan sebagai referensi:
 
-![20190304105622bf155a6cc53796c48877ad20d603e099.png](https://dicodingacademy.blob.core.windows.net/academies/20190304105622bf155a6cc53796c48877ad20d603e099.png)
+![201902180856320073cc3b59071a00e26d5be08eecc67d.png](https://dicodingacademy.blob.core.windows.net/academies/201902180856320073cc3b59071a00e26d5be08eecc67d.png)
 
 Kesempatan untuk submission Anda diterima akan lebih besar jika:
 
+*   Notifikasi dapat berjalan pada perangkat Oreo dan setelahnya
+*   Data pada **widget** dapat diperbarui secara otomatis ketika terdapat perubahan pada data **favorite**.
+*   Menggunakan **SearchView** pada fitur pencarian film.
 *   Menggunakan library pihak ketiga seperti Retrofit, Fast Android Networking, dsb.
+*   Menggunakan library penyimpanan lokal pihak ketiga seperti Room, Realm, dsb.
 *   Menerapkan design pattern seperti MVP, MVVM, Arch Component, dsb.
 *   Aplikasi bisa memberikan pesan eror jika data tidak berhasil ditampilkan.
 *   Menuliskan kode dengan bersih.
 
 Submission Anda akan ditolak jika:
 
-*   Tidak menggunakan <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">Fragment</span> untuk menampung halaman **Movies** dan **Tv** **Show****.**
-
-*   Tidak menggunakan <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">RecyclerView</span> untuk menampilkan daftar film.
-
-*   Tidak menggunakan<span> </span><span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">TabLayout</span>, <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">BottomNavigationView</span> atau yang lainnya sebagai navigasi antara **Movies** dan **Tv** **Show**.
-*   Tidak menggunakan <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">ConstraintLayout</span> untuk menyusun layout pada halaman detail film.
-*   Tidak terdapat indikator loading.
-*   Aplikasi tidak mendukung bahasa Indonesia dan bahasa Inggris.
-*   Aplikasi tidak bisa menjaga data yang sudah dimuat ketika terjadi pergantian orientasi dari potrait ke landscape atau sebaliknya.
-*   Menangani perubahan konfigurasi menggunakan tag <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">android:configChanges</span> pada berkas <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">AndroidManifest.xml</span>
-*   Poster tidak berhasil ditampilkan.
+*   Fitur **pencarian** tidak berjalan dengan baik.
+*   Fitur **pencarian** tidak memanfaatkan endpoint dari **TheMovieDB**.
+*   Fitur **reminder** tidak berjalan dengan baik.
+*   Fitur **release today reminder** tidak memanfaatkan endpoint dari **TheMovieDB.**
+*   Tidak dapat menampilkan data favorite ke dalam **Stack Widget**.
+*   Tidak terdapat aplikasi atau modul baru yang menampilkan data **favorite**.
+*   Tidak menerapkan **Content Provider** sebagai mekanisme untuk mengakses data dari satu aplikasi ke aplikasi lain.
+*   Tidak Mempertahankan semua fitur aplikasi dan komponen yang digunakan pada aplikasi **Movie Catalogue  (Local Storage).**
 *   Informasi yang ditampilkan pada daftar ataupun detail film, tidak relevan.
 
-*   Project tidak bisa di-build.
+*   Aplikasi **force closed**.
 
-*   Aplikasi force closed.
+*   Project tidak bisa di-build.
 
 *   Mengirimkan file selain proyek Android Studio.
 
@@ -66,35 +65,28 @@ Submission Anda akan ditolak jika:
 
 ## Resources
 
-*   Untuk mendapatkan **API Key** silakan ikuti tutorial pada tautan berikut:  
-    [https://blog.dicoding.com/registrasi-testing-themoviedb-api/](https://blog.dicoding.com/registrasi-testing-themoviedb-api/)
-*   Gunakan endpoint berikut untuk mendapatkan data **Movies**:  
-    <span style="color:rgb(226,80,65);">https://api.themoviedb.org/3/discover/movie?api_key=**{API KEY}**&language=en-US</span>
-*   Gunakan endpoint berikut untuk mendapatkan data **Tv Show**:  
-    <span style="color:rgb(226,80,65);">https://api.themoviedb.org/3/discover/tv?api_key=**{API KEY}**&language=en-US</span>
-*   Gunakan url berikut untuk mendapatkan poster film.
+Gunakan endpoint berikut untuk melakukan pencarian film.  
+**Movies**: <span style="color:rgb(226,80,65);">https://api.themoviedb.org/3/search/movie?api_key=**{API KEY}**&language=en-US&query=</span>**<span style="color:rgb(226,80,65);">{MOVIE NAME}</span>**  
+**Tv** **Show**: <span style="color:rgb(226,80,65);">https://api.themoviedb.org/3/search/tv?api_key=**{API KEY}**&language=en-US&query=</span>**<span style="color:rgb(226,80,65);">{TV SHOW NAME}</span>**  
+**Contoh: **<span style="color:rgb(226,80,65);">https://api.themoviedb.org/3/search/movie?api_key=**123456789**&language=en-US&query=</span>**<span style="color:rgb(226,80,65);">Avenger</span>**
 
-    <span style="color:rgb(226,80,65);">https://image.tmdb.org/t/p/**{POSTER SIZE}**/</span>**<span style="color:rgb(226,80,65);">{POSTER FILENAME}</span>**
+Gunakan endpoint berikut untuk mendapatkan film yang rilis pada tanggal hari ini.  
+**Movies release**: <span style="color:rgb(209,72,65);">https://api.themoviedb.org/3/discover/movie?api_key={**API KEY**}&primary_release_date.gte={**TODAY DATE**}&primary_release_date.lte={**TODAY DATE**}</span>  
+**Contoh**: <span style="color:rgb(209,72,65);">https://api.themoviedb.org/3/discover/movie?api_key=**123456789**&primary_release_date.gte=**2019-01-31**&primary_release_date.lte=**2019-01-31**</span>  
+<span style="color:rgb(0,0,0);">**Catatan**: P<span style="color:rgb(0,0,0);">astikan format tanggal yang kalian gunakan benar.</span> Format tanggal yang digunakan adalah **"yyyy-MM-dd"**.</span>
 
-    **POSTER SIZE** di atas adalah ukuran dari poster yang ingin didapatkan. Tersedia beberapa ukuran yang dapat digunakan **w92**, **w154**, **w185**, **w342**, **w500**, **w780**, dan **original**. Sedangkan **POSTER FILENAME** adalah path poster yang bisa didapatkan dari responseJSON dengan key <span style="padding:2px 4px;color:#c7254e;background-color:#f9f2f4;">poster_path</span>.  
-    **Contoh:**  
-    [<span style="color:rgb(226,80,65);">https://image.tmdb.org/t/p**/****w185**/**kSBXou5Ac7vEqKd97wotJumyJvU.jpg**</span>](https://image.tmdb.org/t/p/w185/kSBXou5Ac7vEqKd97wotJumyJvU.jpg)
-
-*   Penjelasan mengenai poster dapat Anda lihat pada tautan berikut:  
-    [https://developers.themoviedb.org/3/configuration/get-api-configuration](https://developers.themoviedb.org/3/configuration/get-api-configuration)
-
-## **<span style="font-size:24px;">Ketentuan</span>**
+**<span style="font-size:24px;">Ketentuan</span>**
 
 Beberapa ketentuan umum dari proyek aplikasi:
 
 *   Menggunakan **Android Studio.**
 
-*   Menggunakan bahasa pemrograman **Kotlin**<span> </span>atau **Java**.
+*   Menggunakan bahasa pemrograman **Kotlin** atau **Java**.
 
-*   Mengirimkan pekerjaan Anda dalam bentuk folder Proyek Android Studio yang telah diarsipkan (**ZIP**).
+*   Mengirimkan pekerjaan Anda dalam bentuk folder Proyek Android Studio yang telah diarsipkan (**ZIP**). Jika Anda membuat** 2 (dua) proyek** untuk aplikasi **Provider** dan **Consumer**, harap arsip menjadi **1 (satu) berkas .zip** saja. **Hindari** juga ada** Zip di dalam Zip,** karena akan mengakibatkan submission Anda tidak bisa di-_extract_ pada platform dicoding dan tidak bisa direview menggunakan **inline review**.
 
 *   Tim penilai akan mengulas submission Anda dalam waktu **selambatnya**** 3 (tiga) hari kerja** (tidak termasuk Sabtu, Minggu, dan hari libur nasional).
-*   Tidak disarankan untuk melakukan submit berkali-kali karena akan memperlama proses penilaian.
+*   Tidak disarankan untuk melakukan submit berkali-kali karena akan memperlama proses penilaian yang dilakukan tim penilai.
 *   Anda akan mendapat notifikasi hasil pengumpulan submission Anda via email, atau Anda dapat mengecek status submission pada akun Dicoding Anda.
 
 ## Tips
@@ -109,12 +101,3 @@ Bagaimana cara ekspor proyek ke dalam berkas **ZIP**?
 
 Dengan cara di atas, ukuran dari berkas **ZIP** akan lebih kecil dibandingkan Anda melakukan kompresi secara manual pada file explorer.
 
-## **<span style="font-size:24px;">Perhatian</span>**
-
-![201911011417282a9425244900eb53c5a42a48ce780d56.png](https://dicodingacademy.blob.core.windows.net/academies/201911011417282a9425244900eb53c5a42a48ce780d56.png)
-
-**Sesuai dengan termsofuse yang ada pada halaman [https://www.dicoding.com/termsofuse](https://www.dicoding.com/termsofuse), submission haruslah hasil karya Anda sendiri.**
-
-**Kode yang didapatkan dari sumber lain (website, buku selain MADE, forum, GitHub, dan lain-lain) hanya digunakan sebagai referensi. Tingkat kesamaannya tidak boleh lebih dari 70%.**
-
-**Kami berhak untuk <span style="color:rgb(226,80,65);">menonaktifkan akun peserta</span> jika gagal mematuhi peraturan yang berlaku.**
