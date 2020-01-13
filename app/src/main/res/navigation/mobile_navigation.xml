@@ -13,9 +13,15 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
+<<<<<<< HEAD
         android:name="com.roniwahyu.moviedbapisqlitejetpack.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+=======
+        android:name="com.roniwahyu.moviedbapisqlitejetpack.ui.movies.MoviesFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_movies" />
+>>>>>>> master
 
     <fragment
         android:id="@+id/navigation_notifications"
